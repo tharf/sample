@@ -17,12 +17,12 @@ node {
 
     stage('Complete any setup steps') {
         echo "Complete set-up steps"
-        echo "${octoperf_test_value}"
+        
     }
 
     stage('Execute Performance Tests') {
-        dir("${WORKSPACE}/scripts") {
-            bat "c:/apache-jmeter/apache-jmeter/bin/jmeter.bat -n -t Shift-Left.jmx -l Shift-Left.jtl -Joptestvalue=${octoperf_test_value}"
+        dir("${WORKSPACE}") {
+            bat "D:/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Java_req.jmx -l Shift-Left.jtl"
         }
     }
 
