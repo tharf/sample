@@ -22,7 +22,7 @@ node {
 
     stage('Execute Performance Tests') {
         dir("${WORKSPACE}") {
-            bat "D:/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Java_req.jmx -l Shift-Left.jtl"
+            bat "D:/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Java_req.jmx -l Shift-Left.csv"
         }
     }
 
